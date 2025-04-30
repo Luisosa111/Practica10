@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Roca
+comment1.params=e\ p
+comment1.target=Roca(Escenario,\ Posicion)
+comment2.params=
+comment2.target=char\ getIndicador()
+numComments=3

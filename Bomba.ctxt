@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Bomba
+comment1.params=e\ p\ radio
+comment1.target=Bomba(Escenario,\ Posicion,\ int)
+comment2.params=
+comment2.target=void\ explotar()
+comment3.params=
+comment3.target=java.lang.String\ destruir()
+comment4.params=
+comment4.target=char\ getIndicador()
+numComments=5
