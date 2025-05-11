@@ -1,22 +1,29 @@
 import java.util.ArrayList;
 import java.util.Iterator;
-
 import java.util.ArrayList;
+import java.util.List;
 
 public class Escenario {
     private String nombre;
-    private ArrayList<Elemento> elementos;
     private final int N = 10;
-
-    public Escenario(String nombre) {
+    private int n;
+    private List<Elemento> elementos=new ArrayList<>();
+    
+    public Escenario(String nombre,int n) {
         this.nombre = nombre;
-        elementos = new ArrayList<>();
+        this.elementos = new ArrayList<>();
+        this.n=n;
     }
 
     public void addElemento(Elemento e) {
         elementos.add(e);
     }
-
+    
+   public List<Elemento> getElementos(){
+       
+       return elementos;
+   }
+   
     public void destruirElementos(Posicion centro, int radio) {
     ArrayList<Elemento> destruidos = new ArrayList<>();
 
@@ -40,15 +47,11 @@ public class Escenario {
     @Override
     public String toString() {
         char[][] matriz = new char[N][N];
-
-        // Inicializa la matriz con '0'
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
                 matriz[i][j] = '0';
             }
         }
-
-    
         for (Elemento e : elementos) {
             int r = e.getPosicion().getRenglon();
             int c = e.getPosicion().getColumna();
@@ -56,8 +59,6 @@ public class Escenario {
                 matriz[r][c] = e.getIndicador();
             }
         }
-
-    
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {

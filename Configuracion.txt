@@ -1,0 +1,4 @@
+Roca 3 4
+Extraterrestre 4 4
+Bomba 4 3 1
+Terricola Ripley 2 2
